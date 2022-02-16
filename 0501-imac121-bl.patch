@@ -1,0 +1,13 @@
+diff -ura linux-5.15/drivers/gpu/drm/radeon/atombios_encoders.c linux-5.15-patched/drivers/gpu/drm/radeon/atombios_encoders.c
+--- linux-5.15/drivers/gpu/drm/radeon/atombios_encoders.c	2021-11-01 04:53:10.000000000 +0800
++++ linux-5.15-patched/drivers/gpu/drm/radeon/atombios_encoders.c	2022-02-14 15:17:07.627545561 +0800
+@@ -198,7 +198,8 @@
+ 	 * so don't register a backlight device
+ 	 */
+ 	if ((rdev->pdev->subsystem_vendor == PCI_VENDOR_ID_APPLE) &&
+-	    (rdev->pdev->device == 0x6741))
++	    (rdev->pdev->device == 0x6741) &&
++      !dmi_match(DMI_PRODUCT_NAME, "iMac12,1"))
+ 		return;
+ 
+ 	if (!radeon_encoder->enc_priv)
