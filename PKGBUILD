@@ -63,7 +63,9 @@ source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_basekernel}.tar.x
         '0410-bootsplash.patch'
         '0411-bootsplash.patch'
         '0412-bootsplash.patch'
-        '0413-bootsplash.gitpatch')
+        '0413-bootsplash.gitpatch'
+        # iMac12,1 patches
+        '0501-imac121-bl.patch')
 sha256sums=('57b2cf6991910e3b67a1b3490022e8a0674b6965c74c12da1e99d138d1991ee8'
             'b8624d726546c66490af074cbf9bb57a55f86cce52b0a8e7080f1ad1c9e06776'
             '93320dbe5928e51fb777a4f13dd9a7364eb150d7983073f7dc159e89a6ffa747'
@@ -94,7 +96,8 @@ sha256sums=('57b2cf6991910e3b67a1b3490022e8a0674b6965c74c12da1e99d138d1991ee8'
             'e9f22cbb542591087d2d66dc6dc912b1434330ba3cd13d2df741d869a2c31e89'
             '27471eee564ca3149dd271b0817719b5565a9594dc4d884fe3dc51a5f03832bc'
             '60e295601e4fb33d9bf65f198c54c7eb07c0d1e91e2ad1e0dd6cd6e142cb266d'
-            '035ea4b2a7621054f4560471f45336b981538a40172d8f17285910d4e0e0b3ef')
+            '035ea4b2a7621054f4560471f45336b981538a40172d8f17285910d4e0e0b3ef'
+            '9d4fb06ec0c7347a6947e2cdd6c3e688993b2e827c36a29f4a7f158828122fde')
 
 prepare() {
   cd "linux-${_basekernel}"
